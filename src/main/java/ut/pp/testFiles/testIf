@@ -1,0 +1,20 @@
+int y = 3;
+int x;
+if (false) {
+    x = 2;
+    if (true) {
+        x = 5;
+    }
+    else {
+        x = 9;
+    }
+    y = 4;
+}
+elseif (false) {
+    x = 6;
+}
+else {
+    x = 7;
+}
+print(x);
+print(y);

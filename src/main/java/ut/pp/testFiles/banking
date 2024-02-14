@@ -1,0 +1,49 @@
+shared int account1, account2, account3;
+
+account1 = 100;
+account2 = 200;
+account3 = 300;
+
+fork(trans1) {
+    get_lock(acc1);
+    get_lock(acc2);
+
+    if (account2 >= 30) {
+        account1 = account1 + 30;
+        account2 = account2 - 30;
+    }
+
+    release_lock(acc1);
+    release_lock(acc2);
+}
+fork(trans2) {
+    get_lock(acc2);
+    get_lock(acc3);
+
+    if (account3 >= 80) {
+        account2 = account2 + 80;
+        account3 = account3 - 80;
+    }
+
+    release_lock(acc2);
+    release_lock(acc3);
+}
+fork(trans3) {
+    get_lock(acc1);
+    get_lock(acc3);
+
+    if (account1 >= 50) {
+        account3 = account3 + 50;
+        account1 = account1 - 50;
+    }
+
+    release_lock(acc1);
+    release_lock(acc3);
+}
+join(trans1);
+join(trans2);
+join(trans3);
+
+print(account1);
+print(account2);
+print(account3);

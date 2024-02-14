@@ -1,0 +1,14 @@
+int x = 5;
+int i = 0;
+int sum = 0;
+bool b = true;
+
+while (i < 8 && b) {
+    sum = sum + x; // sum = 5, 9, 12, 14, 15, 15, 14, 12
+    x = x - 1;
+    i = i + 1;
+    if (sum > 20) {
+        b = false;
+    }
+    print(sum + 1);
+}

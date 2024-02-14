@@ -1,0 +1,6 @@
+bool b = true;
+
+while (b) {
+    b = false;
+    b = (1 == 1);
+}

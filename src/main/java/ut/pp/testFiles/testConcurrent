@@ -1,0 +1,52 @@
+int a = 5;
+int b = 3;
+
+fork (thread2) {
+    int a = 6;
+    fork (thread3) {
+        int a = 7;
+        int b = 8;
+        if (true) {
+            int c = 0;
+            int d;
+            int a;
+            print(a*3);
+        }
+    }
+    a = 9;
+    fork (thread4) {
+        int a = 10;
+        print(a);
+    }
+    print(a*2);
+}
+int c = 3;
+a = 8;
+print(a);
+
+
+//Branch regSprID #loop
+//      thread 0:
+//LoadI 5 regA
+//Store regA dirAddr
+//loadI #thread1 regC
+//writeInstr regC DirAddr1
+//loadI 8 regA
+//writeInstr regA IO
+//Jump #end
+//      thread 1
+//loadI 6 regA
+//loadI #thread2 regC
+//writeInstr regC DirAddr2
+//loadI 9 regA
+//writeInstr regA IO
+//Jump #end
+//      thread 2
+//.....
+//Jump #end
+//      loop
+//ReadInstr IndAddr regSprID
+//Receive regC
+//Compute Equal regC reg0 regB
+//Branch regB #loop
+//Jump Ind regC

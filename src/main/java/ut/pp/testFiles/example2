@@ -1,0 +1,29 @@
+//bool q[3] = [true,true,true];
+//int a ,b, w[6];
+
+//int a = w[0];
+//w = [1,1,1,1,1,1];
+//w[0] = 2;
+//w[3] = false;
+//w[6]
+
+
+//x = [false,false,false];
+
+//x = [4,5,6];
+//bool f;
+//f =  0 >= 3;
+//if(x[2] == true){
+//    bool y = x;
+//}elseif(3 > 1){
+//    int y;
+//}
+
+//bool qq = q[0];
+bool a =1;
+bool x = a;
+bool y = x;
+if (y){
+int q;}
+
+int w = q;

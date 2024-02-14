@@ -1,0 +1,17 @@
+int x = 1;
+int y = 1;
+int z;
+
+int n = 6;
+
+while (n > 1) {
+    z = x + y;
+    x = y;
+    y = z;
+    n = n-1;
+    print(z);
+}
+
+print(z);
+
+// 1,1,2,3,5,8

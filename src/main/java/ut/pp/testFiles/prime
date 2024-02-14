@@ -1,0 +1,16 @@
+int x, i;
+
+x = 35;
+i = 2;
+bool stop = false;
+
+while (!stop && i*i < x) {
+    stop = i*(x/i) == x;
+    i = i+1;
+}
+if (stop) {
+    print(i-1);
+}
+else {
+    print(-1);
+}

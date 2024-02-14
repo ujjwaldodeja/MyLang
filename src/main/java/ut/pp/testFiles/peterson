@@ -1,0 +1,27 @@
+shared bool flag[2];
+shared int turn;
+
+flag = [false, false];
+
+fork(thread2) {
+    flag[1] = true;
+    turn = 0;
+    while (flag[0] == true && turn == 0) {
+        //pass;
+    }
+
+    //critical section
+    print(2);
+
+    flag[1] = false;
+}
+flag[0] = true;
+turn = 1;
+while (flag[1] == true && turn == 1) {
+    //pass;
+}
+
+//critical section;
+print(1);
+
+flag[0] = false;

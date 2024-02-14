@@ -1,0 +1,26 @@
+//bool a[3], b[3];
+//a = [true,true,true];
+//b = [true,true,true];
+
+//bool p = a[0] == b[0]
+
+int x;
+int n = 0;
+while (n > 0){
+    if (false){
+        x = 0;
+    }
+    x = 9;
+    bool x = true;
+
+}
+int y = x;
+
+
+fork(a){
+
+}
+
+int b[5] = [1,2,3,4,5];
+int i = 2;
+int h = b[i];

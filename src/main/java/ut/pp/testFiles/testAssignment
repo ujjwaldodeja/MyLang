@@ -1,0 +1,21 @@
+
+bool a = true;
+int d = 1;
+int n[5] = [1,2,3,4,5];
+bool m[5] = [false, true, false, true, false];
+
+int i = (d);
+bool r = m[0];
+int x = n[4/2];
+print(x);
+
+int q;
+print(q);
+bool p;
+if (!p) {
+    p = true;
+}
+print(p);
+
+
+

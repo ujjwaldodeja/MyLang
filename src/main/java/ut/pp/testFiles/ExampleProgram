@@ -1,0 +1,56 @@
+
+// comment
+shared int k, i;
+
+int b;  // default value == 0
+bool c, d;
+
+
+if (!c) {
+    bool a;
+    c = a == false;
+    int d;
+    d = d * 3;
+}
+
+if (c) {
+    print(5 > 3);
+
+    int a = 3;
+    b = 5;
+    while (a < b) {
+        a = a + 1;
+        print(1);
+    }
+    c = true;
+    if (c) {
+        print(2);
+    }
+    elseif (d) {
+        print(c);
+    }
+    else {
+        print(a);
+    }
+
+    k = 0;
+    i = 0;
+    while (i < 5) {
+        fork (t1) {
+            get_lock(l2); // wait until l1 is available
+            k = k + i;
+            release_lock(l2);
+        }
+        fork (t2) {
+            k = 5;
+        }
+        join (t1);
+        i = i + 1;
+    }
+}
+
+bool e[5];
+
+e[1] = false;
+e[2] = e[1];
+int f[5] = [1,3,6,1,0];

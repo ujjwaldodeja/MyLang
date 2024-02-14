@@ -1,0 +1,21 @@
+shared int a;
+a = 0;
+
+fork (t2) {
+    int b = 0;
+    while (b < 10) {
+        get_lock(l1);
+        a = a+1;
+        release_lock(l1);
+        b = b+1;
+    }
+}
+int b = 0;
+while (b < 10) {
+    get_lock(l1);
+    a = a-1;
+    release_lock(l1);
+    b = b+1;
+}
+join(t2);
+print(a);

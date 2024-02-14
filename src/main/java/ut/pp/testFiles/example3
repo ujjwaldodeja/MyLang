@@ -1,0 +1,16 @@
+int a =1;
+int y = a;
+y = 4;
+
+int x;
+int i = 2;
+if (i>0 ){
+    //int x;
+    x = 7;
+    bool x = true;
+    x=true;
+    int c;
+    //int c,v,b;
+}
+x=2;
+int l;

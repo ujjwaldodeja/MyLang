@@ -1,0 +1,18 @@
+fork(t2) {
+    get_lock(l1);
+    get_lock(l2);
+
+    print(2);
+
+    release_lock(l1);
+    release_lock(l2);
+}
+fork(t3) {
+    get_lock(l2);
+    get_lock(l1);
+
+    print(3);
+
+    release_lock(l1);
+    release_lock(l2);
+}

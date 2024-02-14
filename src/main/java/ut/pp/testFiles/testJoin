@@ -1,0 +1,5 @@
+fork(thread1) {
+    print(5);
+}
+join(thread1);
+print(6);
